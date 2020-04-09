@@ -1,7 +1,7 @@
 # YPicker
 ## Animated elegant easy to use data&amp; date picker
 ------------------------------------------------
-<a href="https://ibb.co/WyMKptf"><img src="https://i.ibb.co/KqfyzwW/YPicker.png" alt="YPicker" border="0"></a> <br/>
+![YPicker.png](Imgs/YPicker.png) <br/>
 YPicker comes in two classes: <br/>
 1: YDataPicker and it can be used in two ways: <br/>
 1: By Passing array of objects and passing the KeyPath of the string variable you are going to display like below:
@@ -54,7 +54,7 @@ And simply call:
 ```javascript
 picker.show(inView: self.view)
 ```
-<br/> <a href="https://imgbb.com/"><img src="https://i.ibb.co/HHnT5NC/video-1586430809-00-00-03-20-00-00-18.gif" alt="video-1586430809-00-00-03-20-00-00-18" border="0"></a> <br/>
+<br/> ![YPicker.png](Imgs/YPicker.gif) <br/>
 And to access selected index: 
 ```javascript
 picker.selectedIndex
