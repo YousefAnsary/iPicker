@@ -1,9 +1,18 @@
-# YPicker
-## Animated elegant easy to use data&amp; date picker
+# *YPicker*
+## *Animated elegant easy to use data&amp; date picker*
 ------------------------------------------------
-<a href="https://ibb.co/WyMKptf"><img src="https://i.ibb.co/KqfyzwW/YPicker.png" alt="YPicker" border="0"></a> <br/>
-YPicker comes in two classes: <br/>
-1: YDataPicker and it can be used in two ways: <br/>
+![YPicker.png](Imgs/YPicker.png) <br/>
+### *Installation* ###
+Add this line to your pod file and run pod install
+```javascript
+pod 'YPicker', :git => 'https://github.com/YousefAnsary/YPicker.git'
+```
+<br/>
+
+### ***Usage*** <br/> <br/>
+#### YPicker comes in two classes: <br/>
+***1: YDataPicker*** <br/>
+and it can be used in two ways: <br/>
 1: By Passing array of objects and passing the KeyPath of the string variable you are going to display like below:
 
 ```javascript
@@ -54,13 +63,13 @@ And simply call:
 ```javascript
 picker.show(inView: self.view)
 ```
-<br/> <a href="https://imgbb.com/"><img src="https://i.ibb.co/HHnT5NC/video-1586430809-00-00-03-20-00-00-18.gif" alt="video-1586430809-00-00-03-20-00-00-18" border="0"></a> <br/>
+<br/> ![YPicker.png](Imgs/YPicker.gif) <br/>
 And to access selected index: 
 ```javascript
 picker.selectedIndex
 ```
 The Second Class is <br/>
-2- YDatePicker
+***2- YDatePicker***
  
 ```javascript
 import UIKit
@@ -98,3 +107,4 @@ picker.show(inView: self.view)
   picker.doneTextColor = UIColor.blue
   picker.pickerBackgroundColor = UIColor.white //default is off white
 ```
+**Special Thanks to My Friend: Amr Khalifa**
