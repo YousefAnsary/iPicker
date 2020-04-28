@@ -1,27 +1,28 @@
-# *YPicker*
+![iPickerL.png](Imgs/iPickerL.png) <br/>
+# *iPicker*
 ## *Animated elegant easy to use data&amp; date picker*
 ------------------------------------------------
-![YPicker.png](Imgs/YPicker.png) <br/>
+![iPicker.png](Imgs/iPicker.png) <br/>
 ### *Installation* ###
 Add this line to your pod file and run pod install
 ```javascript
-pod 'YPicker', :git => 'https://github.com/YousefAnsary/YPicker.git'
+pod 'iPicker', :git => 'https://github.com/YousefAnsary/iPicker.git'
 ```
 <br/>
 
 ### ***Usage*** <br/> <br/>
-#### YPicker comes in two classes: <br/>
-***1: YDataPicker*** <br/>
+#### iPicker comes in two classes: <br/>
+***1: IDataPicker*** <br/>
 and it can be used in two ways: <br/>
 1: By Passing array of objects and passing the KeyPath of the string variable you are going to display like below:
 
 ```javascript
 import UIKit
-import YPicker
+import IPicker
 
 class ViewController: UIViewController {
   
-  let picker = YDataPicker()
+  let picker = IDataPicker()
   
   override func viewDidLoad() {
      super.viewDidLoad()
@@ -42,11 +43,11 @@ Or <br/>
 
 ```javascript
 import UIKit
-import YPicker
+import IPicker
 
 class ViewController: UIViewController {
   
-  let picker = YDataPicker()
+  let picker = IDataPicker()
   
   override func viewDidLoad() {
      super.viewDidLoad()
@@ -63,21 +64,35 @@ And simply call:
 ```javascript
 picker.show(inView: self.view)
 ```
-<br/> ![YPicker.png](Imgs/YPicker.gif) <br/>
+<br/> ![iPicker.gif](Imgs/iPicker.gif) <br/>
 And to access selected index: 
 ```javascript
 picker.selectedIndex
 ```
+And you can listen for events easily via:
+```javascript
+picker.onDoneBtnTapped { selectedIndex in
+  print(selectedIndex)
+}
+
+picker.onValueChanged { selectedIndex in
+  print(selectedIndex)
+}
+
+picker.onCancelled {
+  print("Cancelled")
+}
+```
 The Second Class is <br/>
-***2- YDatePicker***
+***2- IDatePicker***
  
 ```javascript
 import UIKit
-import YPicker
+import IPicker
 
 class ViewController: UIViewController {
   
-  let picker = YDatePicker()
+  let picker = IDatePicker()
   
   override func viewDidLoad() {
      super.viewDidLoad()
@@ -94,6 +109,16 @@ class ViewController: UIViewController {
 To get the selected date:
 ```javascript
 picker.selectedDate
+```
+And similarly listen for events :
+```javascript
+picker.onDoneBtnTapped { selectedDate in
+  print("Date Changed")
+}
+
+picker.onCancelled {
+  print("Cancelled")
+}
 ```
 show method just like the other <br/>
 ```javascript
