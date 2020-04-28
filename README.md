@@ -1,8 +1,8 @@
-![iPickerL.png](Imgs/iPickerL.png) <br/>
+![iPickerL.png](https://github.com/YousefAnsary/iPicker.git/Imgs/iPickerL.png) <br/>
 # *iPicker*
 ## *Animated elegant easy to use data&amp; date picker*
 ------------------------------------------------
-![iPicker.png](Imgs/iPicker.png) <br/>
+![iPicker.png](https://github.com/YousefAnsary/iPicker.git/Imgs/iPicker.png) <br/>
 ### *Installation* ###
 Add this line to your pod file and run pod install
 ```javascript
@@ -64,7 +64,7 @@ And simply call:
 ```javascript
 picker.show(inView: self.view)
 ```
-<br/> ![iPicker.gif](Imgs/iPicker.gif) <br/>
+<br/> ![iPicker.gif](https://github.com/YousefAnsary/iPicker.git/Imgs/iPicker.gif) <br/>
 And to access selected index: 
 ```javascript
 picker.selectedIndex
