@@ -6,7 +6,7 @@
 ### *Installation* ###
 Add this line to your pod file and run pod install
 ```javascript
-pod 'iPicker', :git => 'https://github.com/YousefAnsary/iPicker.git'
+pod 'IPicker', :git => 'https://github.com/YousefAnsary/iPicker.git'
 ```
 <br/>
 
