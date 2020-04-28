@@ -1,6 +1,6 @@
 //
-//  YPicker.swift
-//  YPicker
+//  IPicker.swift
+//  IPicker
 //
 //  Created by Yousef on 9/6/19.
 //  Copyright © 2019 Yousef. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class YPickerView: UIView {
+public class IPickerView: UIView {
     
     //Boolean Handles View Setup
     internal var isFirstAppear = true

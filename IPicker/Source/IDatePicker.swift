@@ -1,6 +1,6 @@
 //
-//  YDatePicker.swift
-//  YPicker
+//  IDatePicker.swift
+//  IPicker
 //
 //  Created by Yousef on 4/9/20.
 //  Copyright © 2020 Yousef. All rights reserved.
@@ -8,11 +8,14 @@
 
 import UIKit
 
-public class YDatePicker: YPickerView {
+public class IDatePicker: IPickerView {
     
     private let datePicker = UIDatePicker()
     
     public var pickerMode: UIDatePicker.Mode = .dateAndTime
+    
+    private var doneBtnDidTapped: ((Date)-> Void)?
+    private var didCancelled: (()-> Void)?
     
     public var seletorColor: UIColor = .lightGray
     public var fontColor: UIColor = .black
@@ -27,6 +30,14 @@ public class YDatePicker: YPickerView {
         guard isFirstAppear else {return}
         setupDatePicker()
         
+    }
+    
+    public func onDoneBtnTapped(_ completion: @escaping (Date)-> Void) {
+        self.doneBtnDidTapped = completion
+    }
+    
+    public func onCancelled(_ completion: @escaping ()-> Void) {
+        self.didCancelled = completion
     }
     
     private func setupDatePicker() {
@@ -57,11 +68,13 @@ public class YDatePicker: YPickerView {
     override func doneBtnTapped() {
         super.doneBtnTapped()
         selectedDate = datePicker.date
+        doneBtnDidTapped?(selectedDate!)
     }
     
     override func upperViewTapped() {
         super.upperViewTapped()
         datePicker.date = selectedDate ?? Date()
+        didCancelled?()
     }
     
 }
