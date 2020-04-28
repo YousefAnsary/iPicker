@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 # 1
 s.platform = :ios
 s.ios.deployment_target = '11.0'
-s.name = "IPicker"
+s.name = "iPicker"
 s.summary = "Let your users pick data or a date elegantly in 3 lines of code."
 #s.requires_arc = true
 
