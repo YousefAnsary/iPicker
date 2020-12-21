@@ -75,8 +75,8 @@ public class IDataPicker: IPickerView {
         picker.constraintCenterX(to: pickerContainerView.centerXAnchor, constant: 0)
         picker.constraintCenterY(to: pickerContainerView.centerYAnchor, constant: 0)
         
-        picker.subviews[1].backgroundColor = selectorColor
-        picker.subviews[2].backgroundColor = selectorColor
+//        picker.subviews[1].backgroundColor = selectorColor
+//        picker.subviews[2].backgroundColor = selectorColor
     }
     
 }
