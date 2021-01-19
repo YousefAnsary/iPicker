@@ -97,7 +97,7 @@ class BottomViewDataPicker: IPickerBottomView, UIPickerViewDelegate, UIPickerVie
     }
     
     public func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        let attributedString = NSAttributedString(string: strings[row], attributes: [NSAttributedString.Key.foregroundColor : textColor])
+        let attributedString = NSAttributedString(string: strings[row], attributes: [NSAttributedString.Key.foregroundColor : textColor!])
         return attributedString
     }
     
