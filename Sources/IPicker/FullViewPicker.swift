@@ -136,7 +136,7 @@ class FullViewPicker: UIView, UITableViewDataSource, UITableViewDelegate {
     func setupView(parent: UIView) {
         
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.backgroundColor = .clear//#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.345890411)
+        self.backgroundColor = .clear
         self.alpha = 0
         
         handleStyles(parent: parent)

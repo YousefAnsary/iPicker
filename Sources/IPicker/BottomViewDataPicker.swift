@@ -25,9 +25,6 @@ class BottomViewDataPicker: IPickerBottomView, UIPickerViewDelegate, UIPickerVie
     private var didChangeValue: ((Int)-> Void)?
     private var didCancelled: (()-> Void)?
     
-//    public var selectorColor: UIColor = .lightGray
-//    public var fontColor: UIColor = .white//.black
-    
     public var selectedIndex: Int! = 0
     
     public func setData<T>(data: [T], key: KeyPath<T, String>) {
@@ -57,11 +54,10 @@ class BottomViewDataPicker: IPickerBottomView, UIPickerViewDelegate, UIPickerVie
     
     override func setupView(parent: UIView) {
         super.setupView(parent: parent)
-//        guard isFirstAppear else { return }
         
-        pickerContainerView1.addSubview(picker)
-        picker.constraintCenterX(to: pickerContainerView1.centerXAnchor, constant: 0)
-        picker.constraintCenterY(to: pickerContainerView1.centerYAnchor, constant: 0)
+        pickerContainerView.addSubview(picker)
+        picker.constraintCenterX(to: pickerContainerView.centerXAnchor, constant: 0)
+        picker.constraintCenterY(to: pickerContainerView.centerYAnchor, constant: 0)
         guard selectedIndex < picker.numberOfRows(inComponent: 0) else {return}
         picker.selectRow(selectedIndex, inComponent: 0, animated: true)
         

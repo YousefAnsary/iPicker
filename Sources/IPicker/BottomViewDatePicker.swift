@@ -45,7 +45,6 @@ public extension IPicker {
     override func setupView(parent: UIView) {
         super.setupView(parent: parent)
         
-//        guard isFirstAppear else {return}
         setupDatePicker()
         
     }
@@ -59,20 +58,10 @@ public extension IPicker {
     }
     
     private func setupDatePicker() {
-        pickerContainerView1.addSubview(datePicker)
-        datePicker.constraintCenterX(to: pickerContainerView1.centerXAnchor, constant: 0)
-        datePicker.constraintCenterY(to: pickerContainerView1.centerYAnchor, constant: 0)
+        pickerContainerView.addSubview(datePicker)
+        datePicker.constraintCenterX(to: pickerContainerView.centerXAnchor, constant: 0)
+        datePicker.constraintCenterY(to: pickerContainerView.centerYAnchor, constant: 0)
     }
-    
-//    override public func show(inView view: UIView) {
-//        super.show(inView: view)
-//
-////        datePicker.datePickerMode = pickerMode
-////        datePicker.date = selectedDate ?? Date()
-////        datePicker.minimumDate = minimumDate
-////        datePicker.maximumDate = maximumDate
-//
-//    }
     
     override func doneBtnTapped() {
         super.doneBtnTapped()

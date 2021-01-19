@@ -24,12 +24,4 @@ public class IPicker {
         case fullViewMultiSelection
     }
     
-    
-    func test() {
-//        IPicker.BottomViewDataPicker(style: .dark)
-//        IPicker.BottomViewDatePicker(style: .light)
-//        IPicker.fullViewPicker(style: .autoLight)
-//        IPicker.fullViewMultiSelectionPicker(style: .autoDark)
-    }
-    
 }
