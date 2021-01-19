@@ -26,5 +26,5 @@ let package = Package(
             name: "IPickerTests",
             dependencies: ["IPicker"]),
     ],
-    swiftLanguageVersions: [.v4_2]
+    swiftLanguageVersions: [.v4]
 )

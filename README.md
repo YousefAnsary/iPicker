@@ -22,7 +22,7 @@ pod 'IPicker', :git => 'https://github.com/YousefAnsary/iPicker.git'
 <br/>
 
 ```
-.package(url: "https://github.com/YousefAnsary/iPicker.git", from: "2.0.1")
+.package(url: "https://github.com/YousefAnsary/iPicker.git", from: "2.0.3")
 ```
 
 <br/>

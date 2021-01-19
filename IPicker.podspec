@@ -16,7 +16,7 @@ s.summary = "Let your users pick data or a date elegantly."
 #s.requires_arc = true
 
 # 2
-s.version = "2.0.2"
+s.version = "2.0.3"
 
 # 3
 s.license = { :type => "MIT", :file => "LICENSE" }
@@ -41,6 +41,6 @@ s.source_files = "Sources/IPicker/*.{swift}"
 s.resources = "Sources/IPicker/Assets/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
 
 # 10
-s.swift_version = "4.2"
+s.swift_version = "4.0"
 
 end
