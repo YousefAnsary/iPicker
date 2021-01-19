@@ -11,10 +11,6 @@ import UIKit
 public extension IPicker {
 class BottomViewDataPicker: IPickerBottomView, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    deinit {
-        print("\(self) Deinit")
-    }
-    
     private lazy var picker: UIPickerView = {
         let picker = UIPickerView()
         picker.delegate = self

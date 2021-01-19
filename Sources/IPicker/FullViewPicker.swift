@@ -11,10 +11,6 @@ import UIKit
 public extension IPicker {
 class FullViewPicker: UIView, UITableViewDataSource, UITableViewDelegate {
     
-    deinit {
-        print("\(self) Deinit")
-    }
-    
     //MARK: - Variables
     private let style: IPicker.Style
     private var blurStyle: UIBlurEffect.Style!
