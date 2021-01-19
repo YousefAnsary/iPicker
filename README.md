@@ -1,135 +1,103 @@
-![iPickerL.png](https://raw.githubusercontent.com/YousefAnsary/iPicker/master/Imgs/iPickerL.png) <br/>
+<!-- ![iPickerL.png](https://raw.githubusercontent.com/YousefAnsary/iPicker/master/Imgs/iPickerL.png) <br/> -->
 # *iPicker*
-## *Animated elegant easy to use data&amp; date picker*
+## *Animated elegant easy to use data&amp; date pickers*
+
+![iPickerL.png](https://raw.githubusercontent.com/YousefAnsary/iPicker/master/Imgs/iPicker.gif) <br/>
+
 ------------------------------------------------
-![iPicker.png](https://raw.githubusercontent.com/YousefAnsary/iPicker/master/Imgs/iPicker.png) <br/>
-### *Installation* ###
-Add this line to your pod file and run pod install
-```javascript
+### *Installation* ### 
+<br/>
+
+**Cocoapod** 
+
+<br/>
+
+```
 pod 'IPicker', :git => 'https://github.com/YousefAnsary/iPicker.git'
 ```
 <br/>
 
-### ***Usage*** <br/> <br/>
-#### iPicker comes in two classes: <br/>
-***1: IDataPicker*** <br/>
-and it can be used in two ways: <br/>
-1: By Passing array of objects and passing the KeyPath of the string variable you are going to display like below:
+**Swift Package Manager**
 
-```javascript
+<br/>
+
+```
+.package(url: "https://github.com/YousefAnsary/iPicker.git", from: "2.0.0")
+```
+
+<br/>
+
+------------------------------------------------
+
+### ***Usage*** <br/>
+#### iPicker now comes with four style options: <br/>
+
+| Style  | Explanation |
+| :------------: |:---------------:|
+|  dark  | Comes in a dark bakground with white texts |
+|  light | Comes in a white bakground with black texts |
+|  autoLight | adapts to user's interface style,if iOS < 12 it is light |
+|  autoDark | adapts to user's interface style, if iOS < 12 it is dark |
+
+<br/>
+
+***Data Pickers***
+
+<br/>
+
+```
 import UIKit
 import IPicker
 
-class ViewController: UIViewController {
-  
-  let picker = IDataPicker()
-  
-  override func viewDidLoad() {
-     super.viewDidLoad()
+func presentPicker() {
+  let picker = IPicker.BottomViewDataPicker(style: .light)
+  // let picker = IPicker.FullViewPicker(style: .dark)
+  // let picker IPicker.FullViewMultiSelectionPicker(style: .autoDark)
      
-     let objArray = [YourClassOrStruct(stringVar: "Some", intVar: 0, anyVar: nil),
-                     YourClassOrStruct(stringVar: "Dummy", intVar: 1, anyVar: nil),
-                     YourClassOrStruct(stringVar: "Data", intVar: 2, anyVar: nil)]
-     
-     picker.setData(data: objArray, key: \.stringVar)
-     
-  }
-
+  let objArray = [SomeClassOrStruct(aStringVar: "Option", ...), ...]
+                     
+  picker.setData(data: objArray, key: \.aStringVar)
+      
+  // OR
+  let stringArray = ["Some", "Dummy", "Data"]
+  picker.setData(data: stringArray)
+      
+  //To change initial seleted value
+  //For Single Selectors
+  picker.selectedIndex = 2 // It is zero by Default
+      
+  //For Multi Selector
+  picker.selectedIndexes = [1, 3] // Empty by Default
+  //
+      
+  picker.didSelect { selectedIndex in }
+  picker.didCancelled { }
+      
+  picker.show(inView: self.view)
 }
 ```
 
-Or <br/>
-2-just passing an array of strings like below:
+<br/> 
 
-```javascript
-import UIKit
-import IPicker
+-------------------------------- 
 
-class ViewController: UIViewController {
-  
-  let picker = IDataPicker()
-  
-  override func viewDidLoad() {
-     super.viewDidLoad()
-     
-     let stringArray = ["Some", "Other", "Dummy", "Data"]
-       
-     picker.setData(data: stringArray)
-  }
+<br/>
 
-}
-```
-And simply call:
-
-```javascript
-picker.show(inView: self.view)
-```
-<br/> ![iPicker.gif](https://raw.githubusercontent.com/YousefAnsary/iPicker/master/Imgs/iPicker.gif) <br/>
-And to access selected index: 
-```javascript
-picker.selectedIndex
-```
-And you can listen for events easily via:
-```javascript
-picker.onDoneBtnTapped { selectedIndex in
-  print(selectedIndex)
-}
-
-picker.onValueChanged { selectedIndex in
-  print(selectedIndex)
-}
-
-picker.onCancelled {
-  print("Cancelled")
-}
-```
-The Second Class is <br/>
-***2- IDatePicker***
+***Date Picker***
  
-```javascript
+```
 import UIKit
 import IPicker
-
-class ViewController: UIViewController {
-  
-  let picker = IDatePicker()
-  
-  override func viewDidLoad() {
-     super.viewDidLoad()
      
-     //YDatePicker Customization
-     picker.pickerMode = UIDatePicker.Mode.dateAndTime //it is dateAndTime by default
-     picker.minimumDate = Date() // It is nil by default
-     picker.maximumDate = Date() //It is nil by default
-     
-  }
-
+func presentDatePicker() {
+  let picker = IPicker.BottomViewDatePicker(style: .autoLight, pickerMode: .dateAndTime)
+  picker.minimumDate = Date() // It is nil by default
+  picker.maximumDate = Date() //It is nil by default
+  picker.selectedDate = Date() //Initial selected date, It is current date by default
+  
+  picker.didSelect { selectedDate in }
+  picker.didCancelled { }
+      
+  picker.show(inView: self.view)
 }
 ```
-To get the selected date:
-```javascript
-picker.selectedDate
-```
-And similarly listen for events :
-```javascript
-picker.onDoneBtnTapped { selectedDate in
-  print("Date Changed")
-}
-
-picker.onCancelled {
-  print("Cancelled")
-}
-```
-show method just like the other <br/>
-```javascript
-picker.show(inView: self.view)
-```
-<br/>Some common customizations <br/>
-```javascript
-  picker.seletorColor: UIColor = .lightGray // lightGray is the default
-  picker.fontColor: UIColor = .black // black is the default
-  picker.doneBtnTitle = "Done" //"Done" is the default 
-  picker.doneTextColor = UIColor.blue
-  picker.pickerBackgroundColor = UIColor.white //default is off white
-```
-**Special Thanks to My Friend: Amr Khalifa**
