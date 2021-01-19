@@ -71,7 +71,11 @@ class FullViewPicker: UIView, UITableViewDataSource, UITableViewDelegate {
         btn.layer.shadowOffset = CGSize(width: 0, height: 0)
         btn.layer.shadowRadius = 20
         btn.setTitle("", for: .normal)
-        let image = UIImage(named: "ok", in: Bundle(for: type(of: self)), compatibleWith: nil)?.maskWithColor(color: .white)
+        var bundle = Bundle(for: type(of: self))
+        #if SWIFT_PACKAGE
+           bundle = Bundle.module
+        #endif
+        let image = UIImage(named: "ok", in: bundle, compatibleWith: nil)?.maskWithColor(color: .white)
         btn.setImage(image, for: .normal)
         btn.contentMode = .scaleToFill
         btn.addTarget(self, action: #selector(doneButtonTapped), for: .touchUpInside)
@@ -89,7 +93,11 @@ class FullViewPicker: UIView, UITableViewDataSource, UITableViewDelegate {
         btn.layer.shadowOffset = CGSize(width: 0, height: 0)
         btn.layer.shadowRadius = 20
         btn.setTitle("", for: .normal)
-        let image = UIImage(named: "close", in: Bundle(for: type(of: self)), compatibleWith: nil)?.maskWithColor(color: .white)
+        var bundle = Bundle(for: type(of: self))
+        #if SWIFT_PACKAGE
+           bundle = Bundle.module
+        #endif
+        let image = UIImage(named: "close", in: bundle, compatibleWith: nil)?.maskWithColor(color: .white)
         btn.setImage(image, for: .normal)
         btn.contentMode = .scaleToFill
         btn.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
