@@ -35,10 +35,10 @@ s.source = { :git => "https://github.com/YousefAnsary/iPicker.git",
 s.framework = "UIKit"
 
 # 8
-s.source_files = "IPicker/Source/*.{swift}"
+s.source_files = "Sources/IPicker/*.{swift}"
 
 # 9
-s.resources = "IPicker/Assets/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
+s.resources = "Sources/IPicker/Assets/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
 
 # 10
 s.swift_version = "4.2"

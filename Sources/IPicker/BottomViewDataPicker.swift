@@ -11,10 +11,6 @@ import UIKit
 public extension IPicker {
 class BottomViewDataPicker: IPickerBottomView, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    deinit {
-        print("\(self) Deinit")
-    }
-    
     private lazy var picker: UIPickerView = {
         let picker = UIPickerView()
         picker.delegate = self
@@ -97,7 +93,7 @@ class BottomViewDataPicker: IPickerBottomView, UIPickerViewDelegate, UIPickerVie
     }
     
     public func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        let attributedString = NSAttributedString(string: strings[row], attributes: [NSAttributedString.Key.foregroundColor : textColor])
+        let attributedString = NSAttributedString(string: strings[row], attributes: [NSAttributedString.Key.foregroundColor : textColor!])
         return attributedString
     }
     
