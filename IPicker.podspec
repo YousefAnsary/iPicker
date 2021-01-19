@@ -12,11 +12,11 @@ Pod::Spec.new do |s|
 s.platform = :ios
 s.ios.deployment_target = '11.0'
 s.name = "IPicker"
-s.summary = "Let your users pick data or a date elegantly in 3 lines of code."
+s.summary = "Let your users pick data or a date elegantly."
 #s.requires_arc = true
 
 # 2
-s.version = "1.1.0"
+s.version = "2.0.0"
 
 # 3
 s.license = { :type => "MIT", :file => "LICENSE" }
@@ -38,7 +38,7 @@ s.framework = "UIKit"
 s.source_files = "IPicker/Source/*.{swift}"
 
 # 9
-#s.resources = "IPicker/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
+s.resources = "IPicker/Assets/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
 
 # 10
 s.swift_version = "4.2"

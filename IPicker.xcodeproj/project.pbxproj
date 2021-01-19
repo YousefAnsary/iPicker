@@ -7,21 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA1FECDD25B49D23004D2BA3 /* FullViewMultiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1FECDC25B49D23004D2BA3 /* FullViewMultiPicker.swift */; };
+		CA1FECE325B49E57004D2BA3 /* IPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1FECE225B49E57004D2BA3 /* IPicker.swift */; };
+		CA1FECE625B49E97004D2BA3 /* UIImageView+IPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1FECE525B49E97004D2BA3 /* UIImageView+IPicker.swift */; };
 		CA2E9D7D243F3F9F00CD2E8B /* IPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = CA2E9D7B243F3F9F00CD2E8B /* IPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA2E9D90243F711500CD2E8B /* IUIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E9D8C243F711500CD2E8B /* IUIViewExtension.swift */; };
-		CA2E9D91243F711500CD2E8B /* IDataPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E9D8D243F711500CD2E8B /* IDataPicker.swift */; };
-		CA2E9D92243F711500CD2E8B /* IPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E9D8E243F711500CD2E8B /* IPickerView.swift */; };
-		CA2E9D93243F711500CD2E8B /* IDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E9D8F243F711500CD2E8B /* IDatePicker.swift */; };
+		CA2E9D90243F711500CD2E8B /* UIView+IPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E9D8C243F711500CD2E8B /* UIView+IPicker.swift */; };
+		CA2E9D91243F711500CD2E8B /* BottomViewDataPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E9D8D243F711500CD2E8B /* BottomViewDataPicker.swift */; };
+		CA2E9D92243F711500CD2E8B /* IPickerBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E9D8E243F711500CD2E8B /* IPickerBottomView.swift */; };
+		CA2E9D93243F711500CD2E8B /* BottomViewDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2E9D8F243F711500CD2E8B /* BottomViewDatePicker.swift */; };
+		CA64F54625A9F825009943FA /* FullViewPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA64F54525A9F825009943FA /* FullViewPicker.swift */; };
+		CA64F54D25AA00FA009943FA /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA64F54C25AA00FA009943FA /* Image.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA1FECDC25B49D23004D2BA3 /* FullViewMultiPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullViewMultiPicker.swift; sourceTree = "<group>"; };
+		CA1FECE225B49E57004D2BA3 /* IPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPicker.swift; sourceTree = "<group>"; };
+		CA1FECE525B49E97004D2BA3 /* UIImageView+IPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+IPicker.swift"; sourceTree = "<group>"; };
 		CA2E9D78243F3F9F00CD2E8B /* IPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA2E9D7B243F3F9F00CD2E8B /* IPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPicker.h; sourceTree = "<group>"; };
 		CA2E9D7C243F3F9F00CD2E8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA2E9D8C243F711500CD2E8B /* IUIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IUIViewExtension.swift; sourceTree = "<group>"; };
-		CA2E9D8D243F711500CD2E8B /* IDataPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDataPicker.swift; sourceTree = "<group>"; };
-		CA2E9D8E243F711500CD2E8B /* IPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPickerView.swift; sourceTree = "<group>"; };
-		CA2E9D8F243F711500CD2E8B /* IDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDatePicker.swift; sourceTree = "<group>"; };
+		CA2E9D8C243F711500CD2E8B /* UIView+IPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+IPicker.swift"; sourceTree = "<group>"; };
+		CA2E9D8D243F711500CD2E8B /* BottomViewDataPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomViewDataPicker.swift; sourceTree = "<group>"; };
+		CA2E9D8E243F711500CD2E8B /* IPickerBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPickerBottomView.swift; sourceTree = "<group>"; };
+		CA2E9D8F243F711500CD2E8B /* BottomViewDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomViewDatePicker.swift; sourceTree = "<group>"; };
+		CA64F54525A9F825009943FA /* FullViewPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullViewPicker.swift; sourceTree = "<group>"; };
+		CA64F54C25AA00FA009943FA /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 		CA2E9D7A243F3F9F00CD2E8B /* IPicker */ = {
 			isa = PBXGroup;
 			children = (
+				CA64F54825A9FDE6009943FA /* Assets */,
 				CA2E9D8B243F706600CD2E8B /* Source */,
 				CA2E9D7B243F3F9F00CD2E8B /* IPicker.h */,
 				CA2E9D7C243F3F9F00CD2E8B /* Info.plist */,
@@ -64,12 +75,24 @@
 		CA2E9D8B243F706600CD2E8B /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				CA2E9D8D243F711500CD2E8B /* IDataPicker.swift */,
-				CA2E9D8F243F711500CD2E8B /* IDatePicker.swift */,
-				CA2E9D8E243F711500CD2E8B /* IPickerView.swift */,
-				CA2E9D8C243F711500CD2E8B /* IUIViewExtension.swift */,
+				CA1FECE225B49E57004D2BA3 /* IPicker.swift */,
+				CA2E9D8E243F711500CD2E8B /* IPickerBottomView.swift */,
+				CA2E9D8D243F711500CD2E8B /* BottomViewDataPicker.swift */,
+				CA2E9D8F243F711500CD2E8B /* BottomViewDatePicker.swift */,
+				CA64F54525A9F825009943FA /* FullViewPicker.swift */,
+				CA1FECDC25B49D23004D2BA3 /* FullViewMultiPicker.swift */,
+				CA2E9D8C243F711500CD2E8B /* UIView+IPicker.swift */,
+				CA1FECE525B49E97004D2BA3 /* UIImageView+IPicker.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		CA64F54825A9FDE6009943FA /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CA64F54C25AA00FA009943FA /* Image.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +164,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA64F54D25AA00FA009943FA /* Image.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,10 +175,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA2E9D90243F711500CD2E8B /* IUIViewExtension.swift in Sources */,
-				CA2E9D93243F711500CD2E8B /* IDatePicker.swift in Sources */,
-				CA2E9D91243F711500CD2E8B /* IDataPicker.swift in Sources */,
-				CA2E9D92243F711500CD2E8B /* IPickerView.swift in Sources */,
+				CA1FECE325B49E57004D2BA3 /* IPicker.swift in Sources */,
+				CA2E9D90243F711500CD2E8B /* UIView+IPicker.swift in Sources */,
+				CA1FECE625B49E97004D2BA3 /* UIImageView+IPicker.swift in Sources */,
+				CA2E9D93243F711500CD2E8B /* BottomViewDatePicker.swift in Sources */,
+				CA2E9D91243F711500CD2E8B /* BottomViewDataPicker.swift in Sources */,
+				CA1FECDD25B49D23004D2BA3 /* FullViewMultiPicker.swift in Sources */,
+				CA2E9D92243F711500CD2E8B /* IPickerBottomView.swift in Sources */,
+				CA64F54625A9F825009943FA /* FullViewPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +241,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +299,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -301,6 +329,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yousef.IPicker;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -328,6 +357,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yousef.IPicker;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

@@ -8,17 +8,29 @@
 
 import UIKit
 
-public class IDataPicker: IPickerView {
+public extension IPicker {
+class BottomViewDataPicker: IPickerBottomView, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    private let picker = UIPickerView()
+    deinit {
+        print("\(self) Deinit")
+    }
+    
+    private lazy var picker: UIPickerView = {
+        let picker = UIPickerView()
+        picker.delegate = self
+        picker.dataSource = self
+        picker.translatesAutoresizingMaskIntoConstraints = false
+        return picker
+    }()
+    
     private var strings: [String] = []
     
     private var doneBtnDidTapped: ((Int)-> Void)?
     private var didChangeValue: ((Int)-> Void)?
     private var didCancelled: (()-> Void)?
     
-    public var selectorColor: UIColor = .lightGray
-    public var fontColor: UIColor = .black
+//    public var selectorColor: UIColor = .lightGray
+//    public var fontColor: UIColor = .white//.black
     
     public var selectedIndex: Int! = 0
     
@@ -30,27 +42,33 @@ public class IDataPicker: IPickerView {
         self.strings = data
     }
     
-    public func onDoneBtnTapped(_ completion: @escaping (Int)-> Void) {
+    public func didSelect(_ completion: @escaping (Int)-> Void) {
         self.doneBtnDidTapped = completion
     }
     
-    public func onCancelled(_ completion: @escaping ()-> Void) {
+    public func didCancelled(_ completion: @escaping ()-> Void) {
         self.didCancelled = completion
     }
     
-    public func onValueChanged(_ completion: @escaping (Int)-> Void) {
+    public func didValueChanged(_ completion: @escaping (Int)-> Void) {
         self.didChangeValue = completion
+    }
+    
+    override public func show(inView view: UIView) {
+        pickerContainerHeight = 190
+        super.show(inView: view)
     }
     
     override func setupView(parent: UIView) {
         super.setupView(parent: parent)
-        guard isFirstAppear else { return }
-        setupNormalPicker()
-    }
-    
-    override public func show(inView view: UIView) {
-        pickerContainerHeight = 165
-        super.show(inView: view)
+//        guard isFirstAppear else { return }
+        
+        pickerContainerView1.addSubview(picker)
+        picker.constraintCenterX(to: pickerContainerView1.centerXAnchor, constant: 0)
+        picker.constraintCenterY(to: pickerContainerView1.centerYAnchor, constant: 0)
+        guard selectedIndex < picker.numberOfRows(inComponent: 0) else {return}
+        picker.selectRow(selectedIndex, inComponent: 0, animated: true)
+        
     }
     
     override func doneBtnTapped() {
@@ -62,26 +80,9 @@ public class IDataPicker: IPickerView {
     override func upperViewTapped() {
         super.upperViewTapped()
         didCancelled?()
-        guard selectedIndex < strings.count else {return}
+        guard selectedIndex < picker.numberOfRows(inComponent: 0) else {return}
         picker.selectRow(selectedIndex, inComponent: 0, animated: false)
     }
-    
-    private func setupNormalPicker() {
-        picker.delegate = self
-        picker.dataSource = self
-        picker.translatesAutoresizingMaskIntoConstraints = false
-        pickerContainerView.addSubview(picker)
-        
-        picker.constraintCenterX(to: pickerContainerView.centerXAnchor, constant: 0)
-        picker.constraintCenterY(to: pickerContainerView.centerYAnchor, constant: 0)
-        
-//        picker.subviews[1].backgroundColor = selectorColor
-//        picker.subviews[2].backgroundColor = selectorColor
-    }
-    
-}
-
-extension IDataPicker: UIPickerViewDelegate, UIPickerViewDataSource {
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -95,17 +96,10 @@ extension IDataPicker: UIPickerViewDelegate, UIPickerViewDataSource {
         didChangeValue?(row)
     }
     
-}
-
-extension IDataPicker {
-    
     public func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        let attributedString = NSAttributedString(string: strings[row], attributes: [NSAttributedString.Key.foregroundColor : fontColor])
+        let attributedString = NSAttributedString(string: strings[row], attributes: [NSAttributedString.Key.foregroundColor : textColor])
         return attributedString
     }
     
-//    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        return strings[row]
-//    }
-    
+}
 }
